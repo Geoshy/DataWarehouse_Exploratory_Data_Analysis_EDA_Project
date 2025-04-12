@@ -1,15 +1,15 @@
 /*
+======================================================================================================================
 Dimensions Exploration:
 Indentifying the unique values (or categories) in each dimension, 
 it help us recognizing how might be grouped or segmented which is useful later for analysis.
+======================================================================================================================
 */
 
 USE DataWarehouse;
 GO
 
 -- First Dimension Table "dim_customers":
-SELECT * FROM gold.dim_customers;
-
 -- (1) Explore Column "country":
 SELECT DISTINCT country
 FROM gold.dim_customers;
@@ -40,8 +40,6 @@ FROM gold.dim_customers;
 -- Female
 
 -- Second Dimension Table "dim_products":
-SELECT * FROM gold.dim_products;
-
 -- (1) Explore Column "category":
 SELECT DISTINCT category 
 FROM gold.dim_products;

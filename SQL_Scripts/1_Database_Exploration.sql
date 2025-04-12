@@ -1,4 +1,5 @@
 /*
+======================================================================================================================
 The target database is represented in the gold layer views of the Medallion architecture of the data warehouse
 that I created in the project "Data Warehouse SQL Project - Unlocking Data-Driven Insights",
 which is the final business-ready data for consumption:
@@ -8,6 +9,7 @@ GitHub Link: https://github.com/Geoshy/Data_Warehouse_SQL_Project
 
 So, in the exploratory data analysis (EDA) project of the (DataWarehouse) data warehouse
 I will query the gold layer views to explore and analyze the data:
+======================================================================================================================
 */
 
 USE DataWarehouse;

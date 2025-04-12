@@ -1,6 +1,8 @@
 /*
+============================================================================================================
 Measures Exploration:
 Calculate the key metric of the business (big numbers), find the highest and lowest level of aggregation.
+============================================================================================================
 */
 
 USE DataWarehouse;

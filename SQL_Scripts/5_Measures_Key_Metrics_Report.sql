@@ -44,8 +44,8 @@ CREATE OR ALTER PROCEDURE measures_key_metrics_sp AS
 BEGIN
     DECLARE @sp_start_time DATETIME, @sp_end_time DATETIME;
     BEGIN TRY
+    
         SET @sp_start_time = GETDATE();
-
         SELECT 'Total Sales' AS measure_name, FORMAT((SUM(sales_amount)), 'N2') AS measure_value FROM gold.fact_sales_details
         UNION ALL
         SELECT 'Total Quantity' AS measure_name, CAST(SUM(quantity) AS NVARCHAR) AS measure_value FROM gold.fact_sales_details
@@ -63,12 +63,12 @@ BEGIN
         SELECT 'Total Customers Count' AS measure_name, CAST(COUNT((customer_id)) AS NVARCHAR(20)) AS measure_value FROM gold.dim_customers;    
 
         SET @sp_end_time = GETDATE();
-
         PRINT('-----------------------------');
         PRINT('Total Strored Procedure Load Duration = ' + CAST((DATEDIFF(SECOND, @sp_start_time, @sp_end_time)) AS NVARCHAR))
         PRINT('-----------------------------');
 
     END TRY
+
     BEGIN CATCH
         PRINT('Error Message: ' + ERROR_MESSAGE());
 		PRINT('Error Line: ' + CAST(ERROR_LINE() AS NVARCHAR(20)));

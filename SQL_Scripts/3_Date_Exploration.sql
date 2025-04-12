@@ -1,7 +1,9 @@
 /*
+======================================================================================================================
 Date Exploration:
-Indentify the earliest and the latest dates (date boundaries),
-to understand the scope of the data and timespan, for the target time analysis.
+    - Indentify the earliest and the latest dates (date boundaries).
+    - Which help to understand the scope of the data and timespan, for the target time analysis.
+======================================================================================================================
 */
 
 USE DataWarehouse;
@@ -23,7 +25,6 @@ SELECT
     DATEDIFF(YEAR, MIN(birthdate), GETDATE()) AS age_of_oldest_customer,
     MAX(birthdate) AS youngest_birthdate,
     DATEDIFF(YEAR, MAX(birthdate), GETDATE()) AS age_of_youngest_customer
-
 FROM
     gold.dim_customers;
 
